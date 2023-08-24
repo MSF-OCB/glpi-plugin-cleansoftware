@@ -59,7 +59,7 @@ function plugin_cleansoftware_install() {
     $migration = new $migrationname(PLUGIN_MSF_VERSION);
     $migration->displayMessage("creation PROCEDURE in db ");
 
-    $query = "
+/*    $query = "
 CREATE PROCEDURE `" . PLUGIN_CLEANSOFTWARE_PROCEDURE_SOFTWARE . "` ()
 BEGIN
 	DELETE
@@ -91,9 +91,9 @@ BEGIN
 			AND `glpi_softwarelicenses`.`softwares_id` IS NULL;
         
 END;";
-    $DB->queryOrDie($query, $DB->error());
+    $DB->queryOrDie($query, $DB->error());*/
 
-    $query = "
+/*    $query = "
 CREATE PROCEDURE `" . PLUGIN_CLEANSOFTWARE_PROCEDURE_MANUFACTURER . "` ()
 BEGIN
 	DELETE
@@ -204,7 +204,7 @@ BEGIN
             AND `glpi_softwares`.`manufacturers_id` IS NULL;
         
 END;";
-    $DB->queryOrDie($query, $DB->error());
+    $DB->queryOrDie($query, $DB->error());*/
 
 
     /*
